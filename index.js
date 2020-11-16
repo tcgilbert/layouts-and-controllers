@@ -2,9 +2,12 @@
 const express = require('express');
 const app = express();
 
-//create at least one route
+app.set('view engine', 'ejs');
+
+
+//create our routes
 app.get('/', (req, res) => {
-    res.send('hello from index.js');
+    res.render('index');
 });
 
 //app.listen
